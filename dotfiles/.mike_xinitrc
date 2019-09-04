@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# This script will get executed after the desktop loads
+
+
+# Remap Caps Lock to Escape
+xmodmap -e 'remove mod4 = Super_L' -e 'keycode 133 = Escape'
+
+
+# Enable touchpad natural scrolling
+for x in $(xinput list | grep -i 'Touchpad' | sed -n 's/.*=\([0-9]*\).*/\1/p'); do xinput --set-prop $x "Australian Scrolling" "1"; done
+

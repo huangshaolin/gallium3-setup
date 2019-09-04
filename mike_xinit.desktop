@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=mike_xinit
+Type=Application
+Exec=bash -c "sleep 2; bash ~/.mike_xinitrc"
+X-GNOME-Autostart-enabled=true
